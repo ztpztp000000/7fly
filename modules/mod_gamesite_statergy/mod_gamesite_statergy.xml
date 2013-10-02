@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>mod_gamesite_statergy</name>
+	<author>Jerry</author>
+	<creationDate>May 2013</creationDate>
+	<copyright>Copyright (C) 2013 - 2013 daxian. All rights reserved.</copyright>
+	<license> daxian </license>
+	<authorEmail>jerry@wanooxx.com</authorEmail>
+	<authorUrl>www.wanooxx.com</authorUrl>
+	<version>2.5.9</version>
+	<description>MOD_GAMESITE_STATERGY_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_gamesite_statergy">mod_gamesite_statergy.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_gamesite_statergy.xml</filename>
+	</files>
+	<languages>
+		<language tag="zh-CN">zh-CN.mod_gamesite_statergy.ini</language>
+		<language tag="zh-CN">zh-CN.mod_gamesite_statergy.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_LOGIN" />
+	<config>
+		<fields name="params">
+		</fields>
+	</config>
+</extension>

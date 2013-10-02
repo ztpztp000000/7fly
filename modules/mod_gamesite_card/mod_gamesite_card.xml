@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>mod_gamesite_card</name>
+	<author>Jerry</author>
+	<creationDate>May 2013</creationDate>
+	<copyright>Copyright (C) 2013 - 2013 daxian. All rights reserved.</copyright>
+	<license> daxian </license>
+	<authorEmail>jerry@wanooxx.com</authorEmail>
+	<authorUrl>www.wanooxx.com</authorUrl>
+	<version>2.5.9</version>
+	<description>Game site new card</description>
+	<files>
+		<filename module="mod_gamesite_card">mod_gamesite_card.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_gamesite_card.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+		</fields>
+	</config>
+</extension>

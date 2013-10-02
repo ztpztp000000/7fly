@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>mod_hot_game</name>
+	<author>ooxx</author>
+	<creationDate>February 2013</creationDate>
+	<copyright>Copyright (C) 2013 - 2013 ooxx. All rights reserved.</copyright>
+	<license> ooxx </license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>2.5.0</version>
+	<description>MOD_HOT_GAME_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_hot_game">mod_hot_game.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_hot_game.xml</filename>
+	</files>
+	<languages>
+		<language tag="zh-CN">zh-CN.mod_hot_game.ini</language>
+		<language tag="zh-CN">zh-CN.mod_hot_game.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_LOGIN" />
+	<config>
+		<fields name="params">
+		</fields>
+	</config>
+</extension>

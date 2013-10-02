@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: zh-CN.com_kunena.xml 4079 2010-12-25 04:10:13Z fxstein $ -->
+<!DOCTYPE install>
+<install type="language" version="1.5" client="site" method="upgrade">
+	<name>Kunena Forum - Chinese</name>
+	<tag>zh-CN</tag>
+	<creationDate>2010-12-29</creationDate>
+	<version>1.6.2</version>
+	<build>3894</build>
+	<author>baijianpeng</author>
+	<authorEmail>unknown</authorEmail>
+	<authorUrl>http://www.joomlagate.com</authorUrl>
+	<copyright>(C) 2010 unknown</copyright>
+	<license>GNU/GPL</license>
+	<description>Chinese language file for Kunena Forum Component</description>
+
+	<files>
+        <filename>zh-CN.com_kunena.ini</filename>
+        <filename>zh-CN.com_kunena.tpl_default.ini</filename>
+        <filename>zh-CN.com_kunena.tpl_example.ini</filename>
+		<filename>zh-CN.mod_kunenalatest.ini</filename>
+        <filename>zh-CN.mod_kunenalogin.ini</filename>
+        <filename>zh-CN.mod_kunenastats.ini</filename>
+        <filename>zh-CN.mod_kunenasearch.ini</filename>
+	</files>
+</install>

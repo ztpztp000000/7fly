@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>盛世三国</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css?2" />
+    <script type="text/javascript" src="images/jquery.js"></script>
+</head>
+<body>
+    <div id="warpper" class="clearfix">
+        <div class="content">
+            <div id="reg-box" style="display: none">
+                <form name="reg-form" id="UserRegisterForm" method="post" action="/users/register">
+                <ul>
+                    <li id="login_title" style="text-indent: -9999px;">起飞游戏帐号注册</li>
+                    <li><span class="value">
+                        <label for="reg_username">
+                        </label>
+                    </span><span class="ipt-box">
+                        <input id="reg_username" type="text" name="username" autocomplete="off" />
+                    </span><span id="reg_username_info" class="info"></span></li>
+                    <li><span class="value">
+                        <label for="reg_password">
+                        </label>
+                    </span><span class="ipt-box">
+                        <input id="reg_password" type="password" name="password" />
+                    </span><span id="reg_password_info" class="info"></span></li>
+                    <li><span class="value">
+                        <label for="reg_password_confirm">
+                        </label>
+                    </span><span class="ipt-box">
+                        <input id="reg_password_confirm" type="password" name="password_confirm" />
+                    </span><span id="reg_password_confirm_info" class="info"></span></li>
+                    <!--li>
+                                <span class="value"><label for="realname">真实姓名</label></span>
+                                <span class="ipt-box"><input id="realname" type="text" name="data[User][realname]" /></span>
+                                <span id="realname_info" class="info info_ok">请输入真实姓名</span>
+                            </li>
+                            <li>
+                                <span class="value"><label for="realid">身份证</label></span>
+                                <span class="ipt-box"><input id="realid" type="text" name="data[User][realid]" /></span>
+                                <span id="realid_info" class="info info_ok">请输入有效身份证</span>
+                            </li-->
+                </ul>
+                <div class="reg-sub-btn">
+                    <input type="hidden" name="continue" value="start.html" />
+                    <input type="hidden" name="site" value="xd" />
+                    <input id="reg-submit" name="reg-submit" type="submit" style="width: 1px; height: 1px" />
+                    <a class="btn-link" id="reg_submit_btn" title="" href="javascript:register();">立即注册</a>
+                    <a class="not_btn" id="goto_log_btn" title="" href="javascript:to_login_box();">老用户登录</a>
+                    <span id="register_error_div" style='margin-left: 20px; color: red'></span>
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                            // 绑定账号输入框失去焦点时验证账号
+                            $("#reg_username").focus(function() {
+                                $("#reg_username_info").html("2-20个中英文数字");
+                            }).blur(function() {
+                                var username = this.value;
+                                if (!username) {
+                                    $("#reg_username_info").html("");
+                                    return;
+                                }
+                                if (username && username.length < 2) {
+                                    $("#reg_username_info").html("<font color='red'>账号太短,至少2位</font>");
+                                    return;
+                                }
+                                if (username && username.length > 20) {
+                                    $("#reg_username_info").html("<font color='red'>账号太长,最多20位</font>");
+                                    return;
+                                }
+
+                                // 请求服务器验证账号是否存在
+                                var url = "http://www.777fly.com/user.php?action=check_member_username&member_username=" + encodeURIComponent(username) + "&r=" + Math.random();
+                                $.ajax({
+                                    url: url,
+                                    type: "GET",
+                                    async: false,
+                                    dataType: "text",
+                                    success: function(data) {
+                                        if (data == 1) {
+                                            $("#reg_username_info").html("<font color='red'>账号已存在</font>");
+                                            return;
+                                        }
+
+                                        $("#reg_username_info").html("该账号可用!");
+                                    }
+                                });
+                            });
+
+                            // 绑定密码输入框失去焦点时验证密码
+                            $("#reg_password").focus(function() {
+                                $("#reg_password_info").html("最短6位");
+                            }).blur(function() {
+                                var password = this.value;
+                                if (!password) {
+                                    $("#reg_password_info").html("");
+                                    return;
+                                }
+                                if (password && password.length < 6) {
+                                    $("#reg_password_info").html("<font color='red'>密码太短，最少6位</font>");
+                                    return;
+                                }
+                                var level = 0, modes = 0;
+                                for (var index = 0; index < password.length; index++) {
+                                    var charType = 0;
+                                    var charCode = password.charCodeAt(index);
+                                    if (charCode >= 48 && charCode <= 57) {
+                                        charType = 1;
+                                    } else if (charCode >= 65 && charCode <= 90) {
+                                        charType = 2;
+                                    } else if (charCode >= 97 && charCode <= 122) {
+                                        charType = 4;
+                                    } else {
+                                        charType = 4;
+                                    }
+
+                                    modes |= charType;
+                                }
+                                for (var index = 0; index < 4; index++) {
+                                    if (modes & 1) level++;
+                                    modes >>>= 1;
+                                }
+                                if (password.length <= 4) {
+                                    level = 1;
+                                }
+                                switch (level) {
+                                    case 1: $("#reg_password_info").html("强度弱"); break;
+                                    case 2: $("#reg_password_info").html("强度中"); break;
+                                    case 3: $("#reg_password_info").html("强度高"); break;
+                                    case 4: $("#reg_password_info").html("强度高"); break;
+                                    default: break;
+                                }
+                            });
+
+                            // 绑定确认密码输入框失去焦点时验证确认密码
+                            $("#reg_password_confirm").focus(function() {
+                                $("#reg_password_confirm_info").html("输入确认密码");
+                            }).blur(function() {
+                                var password = $("#reg_password").value();
+                                var password_confirm = this.value;
+                                if (!password_confirm) {
+                                    $("#reg_password_confirm_info").html("");
+                                    return;
+                                }
+                                if (password && password != password_confirm) {
+                                    $("#reg_password_confirm_info").html("<font color='red'>两次密码不一致</font>");
+                                    return;
+                                }
+                            });
+                        });
+                        function to_login_box() {
+                            $("#log-box").show();
+                            $("#reg-box").hide();
+                        }
+                        function register() {
+                            var username = $("#reg_username").val();
+                            var password = $("#reg_password").val();
+                            var password_confirm = $("#reg_password_confirm").val();
+                            if (!username || $.trim(username) == '') {
+                                $("#reg_username_info").html("<font color='red'>账号不能为空!</font>");
+                                return false;
+                            }
+                            username = $.trim(username);
+                            if (username && username.length < 2) {
+                                $("#reg_username_info").html("<font color='red'>账号太短,至少2位</font>");
+                                return;
+                            }
+                            if (username && username.length > 20) {
+                                $("#reg_username_info").html("<font color='red'>账号太长,最多20位</font>");
+                                return;
+                            }
+                            if (!password) {
+                                $("#reg_password_info").html("密码不能为空！");
+                                return;
+                            }
+                            password = $.trim(password);
+                            password_confirm = $.trim(password_confirm);
+                            if (password && password.length < 6) {
+                                $("#reg_password_info").html("<font color='red'>密码太短，最少6位</font>");
+                                return;
+                            }
+                            if (password && password != password_confirm) {
+                                $("#reg_password_confirm_info").html("<font color='red'>两次密码不一致</font>");
+                                return false;
+                            }
+
+                            // 请求服务器注册账号
+                            var url = "http://www.777fly.com/user.php?action=register_ok&member_username=" + encodeURIComponent(username) + "&member_mail=&member_password=" + encodeURIComponent(password) + "&member_password_confirm=" + encodeURIComponent(password_confirm) + "&r=" + Math.random()
+                            $.ajax({
+                                type: "GET",
+                                url: url,
+                                dataType: "text",
+                                async: false,
+                                error: function(data) {
+                                    window.alert(data);
+                                },
+                                success: function(data) {
+                                    if (data == "error:username_is_empty") {
+                                        $("#register_error_div").html("用户名不能为空！");
+                                        return false;
+                                    } else if (data == "error:username_is_occupy") {
+                                        $("#register_error_div").html("该用户名已被占用！");
+                                        return false;
+                                    } else if (data == "error:mail_is_empty") {
+                                        $("#register_error_div").html("邮件地址不能为空！");
+                                        return false;
+                                    } else if (data == "error:mail_is_error") {
+                                        $("#register_error_div").html("邮件地址不合法！");
+                                        return false;
+                                    } else if (data == "error:password_is_empty") {
+                                        $("#register_error_div").html("密码不能为空！");
+                                        return false;
+                                    } else if (data == "error:password_is_error") {
+                                        $("#register_error_div").html("二次输入密码不正确！");
+                                        return false;
+                                    }
+
+                                    var url_continue = $(".reg-sub-btn input[name='continue']").val();
+                                    window.location.href = url_continue;
+                                }
+                            });
+                        }
+                    </script>
+                </div>
+                </form>
+            </div>
+            <div id="log-box">
+                <h1 class="login_title1">
+                    &nbsp;</h1>
+                <form name="log-form" id="UserLoginForm" method="post" action="/users/login">
+                <ul>
+                    <li><span class="value">
+                        <label id="label_username" for="login_username">
+                        </label>
+                    </span><span class="ipt-box">
+                        <input id="login_username" type="text" name="username" />
+                    </span></li>
+                    <li><span class="value">
+                        <label for="login_password">
+                        </label>
+                    </span><span class="ipt-box">
+                        <input id="login_password" type="password" name="password" />
+                    </span></li>
+                    <li id="login_authkey_div" style="display: none;"><span class="value" style="float: left;">
+                        <label for="login_verify">
+                            验证码：</label>
+                    </span><span class="ipt-box ipt-box2" style="float: left;">
+                        <input name="text" type="text" id="login_verify" />
+                    </span>
+                        <img alt="验证码" title="点击刷新" id="login_authkey_img" src="http://777fly.com/authcode.php"
+                            class="verify_img" onclick="javascript:this.src='http://777fly.com/authcode.php?random='+Math.random();"
+                            style="cursor: pointer;" />
+                    </li>
+                    <li><span class="value"></span><span>
+                        <input style="vertical-align: middle; margin-right: 3px;" id="save_cookie" type="checkbox"
+                            name="data[User][remember_me]">
+                        <label for="save_cookie" style="color: white;">
+                            记住帐号</label>
+                    </span><span id="login_error_div" style='color: red; padding-left: 15px;'></span>
+                        <input type="hidden" name="data[User][site]" value="xd" style="width: 10px; height: 10px;
+                            margin-left: 10px" id="login_site" />
+                    </li>
+                </ul>
+                <div class="reg-sub-btn">
+                    <input type="hidden" name="continue" value="start.html" />
+                    <input id="log-submit" name="log-submit" type="submit" style="width: 1px; height: 1px" />
+                    <a class="btn-link" id="login_submit_btn" title="" href="javascript:login();">登陆游戏</a>
+                    <a class="not_btn" id="goto_reg_btn" title="" href="javascript:to_regster_box();">新帐号注册</a>
+                    <script type="text/javascript">
+                        function to_regster_box() {
+                            $("#reg-box").show();
+                            $("#log-box").hide();
+                            $("#reg_username").focus();
+                        }
+                        function login() {
+                            if ($(".btn-link-disable").length == 1 && $(".btn-link-disable").attr("id") == "login_submit_btn") return;
+                            var username = $("#login_username").val();
+                            var password = $("#login_password").val();
+                            if (!username || username.length == 0) {
+                                window.alert("账号不能为空！");
+                                return;
+                            }
+                            if (!password || password.length == 0) {
+                                window.alert("密码不能为空！");
+                                return;
+                            }
+                            if (password.length < 6 && password.length > 20) {
+                                window.alert('密码由6-20个字符组成，建议使用英文字母加数字或符号的组合密码。');
+                                return false;
+                            }
+                            $("#login_submit_btn").addClass("btn-link-disable").html("载入中...");
+                            $.ajax({
+                                type: "GET",
+                                url: "http://www.777fly.com/user.php?action=login_ok&member_username=" + encodeURI(username) + "&member_password=" + encodeURI(password) + "&r=" + Math.random(),
+                                dataType: "text",
+                                async: false,
+                                success: function(e) {
+                                    if (e == 'error:username_is_empty') {
+                                        window.alert('用户名不能为空！');
+                                        return false;
+                                    } else if (e == 'error:password_is_empty') {
+                                        window.alert('密码不能为空！');
+                                        return false;
+                                    } else if (e == 'error:account_is_not_activate') {
+                                        window.alert('您的账户还没有激活！请到您的邮箱激活帐号！');
+                                        return false;
+                                    } else if (e == 'error:account_is_lock') {
+                                        window.alert('您的账户已被锁定！请联系管理员解锁！');
+                                        return false;
+                                    } else if (e == 'error:login_failed') {
+                                        window.alert('登录失败！');
+                                        return false;
+                                    }
+
+                                    var url_continue = $(".reg-sub-btn input[name='continue']").val();
+                                    window.location.href = url_continue;
+                                }
+                            });
+                        }
+                    </script>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="ads-box">
+                <a target="_blank" href="../archives/1368">
+                    <img src="http://game.verycd.com/game/images/login_ad.gif?13068336407" alt="最新开服公告" /></a>
+            </div>
+            <div class="news-box">
+                <div class="news-box-title">
+                    <span style="float: left;">客服中心</span> <a href="http://sg.xd.com" style="color: #d8d8d8;
+                        float: right; font-size: 12px;" target="_blank">进入官网&gt;&gt;</a>
+                </div>
+                <div class="news-box-main">
+                    <p>
+                        玩家交流群：<br />
+                        <span style="color: white;"><a target="_blank" href="http://qun.qq.com/#jointhegroup/gid/20335110"
+                            style="color: white;">20335110</a></span></p>
+                    <p>
+                        <br />
+                        <!--span style="color:white;">2群：<a target="_blank" href="http://qun.qq.com/#jointhegroup/gid/109690597" style="color:white;">109690597</a></span><br />
+                        <span style="color:white;">3群：<a target="_blank" href="http://qun.qq.com/#jointhegroup/gid/147894167" style="color:white;">147894167</a>(新)</span><br /-->
+                        <a target="_blank" style="color: #BCA734; text-decoration: underline; font-weight: bold;"
+                            href="http://bbs.xd.com/thread-20815-1-1.html">登录遇到问题？</a><br />
+                        客服QQ：
+                        <br />
+                        GM01：<a target="blank" href="http://wpa.qq.com/msgrd?v=3&uin=537090821&site=qq&menu=yes">537090821</a>
+                        <br />
+                        GM02：<a target="blank" href="http://wpa.qq.com/msgrd?v=3&uin=537090828&site=qq&menu=yes">537090828</a>
+                        <br />
+                        客服热线：<span style="color: white;">4008206706</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb6f67f3fc8d2bebde3404286133c2815' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</body>
+</html>

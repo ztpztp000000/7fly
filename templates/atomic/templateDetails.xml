@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension
+	version="2.5"
+	type="template"
+	client="site">
+	<name>atomic</name>
+	<creationDate>10/10/09</creationDate>
+	<author>Ron Severdia</author>
+	<authorEmail>contact@kontentdesign.com</authorEmail>
+	<authorUrl>http://www.kontentdesign.com</authorUrl>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>2.5.0</version>
+	<description>TPL_ATOMIC_XML_DESCRIPTION</description>
+	<files>
+		<folder>html</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>language</folder>
+		<folder>js</folder>
+		<filename>index.php</filename>
+		<filename>index.html</filename>
+		<filename>favicon.ico</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+	</files>
+
+	<positions>
+		<position>atomic-bottomleft</position>
+		<position>atomic-bottommiddle</position>
+		<position>atomic-search</position>
+		<position>atomic-sidebar</position>
+		<position>atomic-topmenu</position>
+		<position>atomic-topquote</position>
+		<position>position-bottom</position>
+		<position>position-bottom1</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+		<position>position-15</position>
+	</positions>
+
+	<!-- 	For core templates, we also install/uninstall the language files in the core language folders.
+	-->
+	<languages folder="language">
+		<language tag="zn-CN">zn-CN/zn-CN.tpl_atomic.ini</language>
+		<language tag="zn-CN">zn-CN/zn-CN.tpl_atomic.sys.ini</language>
+	</languages>
+
+</extension>

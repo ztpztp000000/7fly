@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension
+	version="2.5"
+	type="template"
+	method="upgrade" client="site">
+	<name>玩ox平台</name>
+	<version>2.1.1</version>
+	<creationDate>28 04 2013</creationDate>
+	<author>wanooxx.com</author>
+	<authorEmail>hugh@wanooxx.com</authorEmail>
+	<authorUrl>http://www.wanooxx.com</authorUrl>
+	<copyright>Copyright (C), daxian  Co., Ltd. All Rights Reserved.</copyright>
+	<group>t3</group>
+	<description>	
+	<![CDATA[
+	<div align="center">
+		<div class="alert alert-success" style="background-color:#DFF0D8;border-color:#D6E9C6;color: #468847;padding: 1px 0;">
+				<a href="http://t3-framework.org/"><img src="http://joomlart.s3.amazonaws.com/images/jat3v3-documents/message-installation/mitius-logo.png" alt="some_text" width="357" height="60"></a>
+				<h4><a href="http://www.joomlart.com/forums/downloads.php?do=cat&id=472" title="">Download</a> | <a href="http://joomla30-templates.joomlart.com/ja_mitius/" title="">Demo</a> | <a href="http://www.joomlart.com/forums/showthread.php?82848-JA-Mitius-Template-Userguide" title="">Document</a> | <a href="http://pm.joomlart.com/browse/JATCMITIUS" title="">Changelog</a></h4>
+		<p> </p>
+		<span style="color:#FF0000">Note: 此模板需要T3插件的安装和启用.</span><p></p>
+		<p>Copyright 2012 - 2013 <a href='http://www.wanooxx.com/' title='Visit wanooxx.com!'>wanooxx.com</a>.</p>
+		</div>
+     <style>table.adminform{width: 100%;}</style>
+	 </div>
+	]]>
+	</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>offline.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateInfo.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>etc</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+		<folder>tpls</folder>
+	</files>
+	
+	<languages folder="languages">
+		<language tag="zh-CN">zh-CN.tpl_ja_mitius.ini</language>
+		<language tag="zh-CN">zh-CN.tpl_ja_mitius.sys.ini</language>
+	</languages>
+
+	<positions>
+		<position>top-menu</position>
+		<position>top-login</position>
+		<position>top-newsticker</position>
+		<position>head-search</position>
+		<position>social</position>
+		<position>slideshow</position>
+		<position>slidenews</position>
+		<position>position-1</position>
+		<position>message</position>
+		<position>position-7</position>
+		<position>position-5</position>
+		<position>mast-col</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>navhelper</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-4</position>
+		<position>footermenu</position>
+		<position>footer</position>
+		<position>topbanner</position>
+		<position>login</position>
+		<position>body</position>
+	</positions>
+
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/jaT3/includes/depend">
+
+			<!-- Sample for add or disable template parameters -->
+			<!--fieldset name="menu_params" label="T3_PARAMS_MEGAMENU">
+				<field name="group_disable" type="t3depend" function="@group">
+					<option for="menu_as_bg" value="no">menu_as_bg</option>
+				</field>
+			</fieldset-->
+			
+		</fields>
+		
+		<!-- Sample for add or disable configuration variable -->
+		<fields name="thememagic" addfieldpath="/plugins/system/jaT3/includes/depend">
+
+      <fieldset name="scaffolding_params" label="T3_TM_SCAFFOLDING">        
+        <field name="bodyBackground" type="color" default="" label="T3_TM_VARS_BODY_BKG_LABEL" description="T3_TM_VARS_BODY_BKG_DESC" />
+        <field name="textColor" type="color" default="" label="T3_TM_VARS_TEXT_COLOR_LABEL" description="T3_TM_VARS_TEXT_COLOR_DESC" />
+        <field name="linkColor" type="color" default="" label="T3_TM_VARS_LINK_COLOR_LABEL" description="T3_TM_VARS_LINK_COLOR_DESC" />
+        <field name="linkColorHover" type="color" default="" label="T3_TM_VARS_LINK_COLOR_HOVER_LABEL" description="T3_TM_VARS_LINK_COLOR_HOVER_DESC" />
+      </fieldset>
+
+      <fieldset name="module_params" label="T3_TM_MODULE">
+        <field name="T3moduleBackground" type="color" default="" label="T3_TM_VARS_MODULE_BGCOLOR_LABEL" description="T3_TM_VARS_MODULE_BGCOLOR_DESC" />
+        <field name="T3moduleColor" type="color" default="" label="T3_TM_VARS_MODULE_COLOR_LABEL" description="T3_TM_VARS_MODULE_COLOR_DESC" />
+        <field name="T3moduleTitleBackground" type="color" default="" label="T3_TM_VARS_MODULE_TITLE_BGCOLOR_LABEL" description="T3_TM_VARS_MODULE_TITLE_BGCOLOR_DESC" />
+        <field name="T3moduleTitleColor" type="color" default="" label="T3_TM_VARS_MODULE_TITLE_COLOR_LABEL" description="T3_TM_VARS_MODULE_TITLE_COLOR_DESC" />
+      </fieldset>
+
+      <fieldset name="typo_params" label="T3_TM_TYPO">
+        <field name="typo_params_default" type="t3depend" function="@group">
+          <option for="baseFontFamily" value="undefined">baseFontFamily_custom</option>
+          <option for="headingsFontFamily" value="undefined">headingsFontFamily_custom</option>
+        </field>
+
+        <field name="baseFontSize" type="text" default="14px" size="10" class="input-tiny" 
+          label="T3_TM_VARS_FONTSIZE_LABEL"
+          description="T3_TM_VARS_FONTSIZE_DESC" />
+
+        <field name="baseFontFamily" type="list" 
+          label="T3_TM_VARS_FONTFAMILY_LABEL" 
+          description="T3_TM_VARS_FONTFAMILY_DESC" >
+          <option value="sans-serif">T3_TM_VARS_FONTFAMILY_SANS_SERIF</option>
+          <option value="serif">T3_TM_VARS_FONTFAMILY_SERIF</option>
+          <option value="monospace">T3_TM_VARS_FONTFAMILY_MONOSPACE</option>
+          <option value="undefined">T3_TM_VARS_FONTFAMILY_CUSTOM</option>  
+        </field>
+
+        <field name="baseFontFamily_custom" type="text" default="sans-serif" size="30"
+          label="T3_TM_VARS_FONTFAMILY_CUSTOM_LABEL"
+          description="T3_TM_VARS_FONTFAMILY_CUSTOM_DESC" />
+
+        <field name="headingsFontFamily" type="list"
+          label="T3_TM_VARS_HEADINGFONTFAMILY_LABEL" 
+          description="T3_TM_VARS_HEADINGFONTFAMILY_DESC" >
+          <option value="sans-serif">T3_TM_VARS_FONTFAMILY_SANS_SERIF</option>
+          <option value="serif">T3_TM_VARS_FONTFAMILY_SERIF</option>
+          <option value="monospace">T3_TM_VARS_FONTFAMILY_MONOSPACE</option>
+          <option value="undefined">T3_TM_VARS_FONTFAMILY_CUSTOM</option>
+        </field>
+        <field name="headingsFontFamily_custom" type="text" default="sans-serif"  size="30"
+          label="T3_TM_VARS_FONTFAMILY_CUSTOM_LABEL"
+          description="T3_TM_VARS_FONTFAMILY_CUSTOM_DESC" />
+      </fieldset>
+
+			<fieldset name="links_params" label="T3_THEMER_FOOTER">
+				<field name="T3FooterModuleTitleColor" type="color" class="t3tm-color" default="" label="T3_VARS_FOOTER_MOD_TCOLOR_LABEL" description="T3_VARS_FOOTER_MOD_TCOLOR_DESC" />
+				<field name="T3FooterModuleColor" type="color" class="t3tm-color" default="" label="T3_VARS_FOOTER_MOD_COLOR_LABEL" description="T3_VARS_FOOTER_MOD_COLOR_DESC" />
+				<field name="T3FooterLinkColor" type="color" default="" label="T3_VARS_FOOTER_LINK_COLOR_LABEL" description="T3_VARS_FOOTER_LINK_COLOR_DESC" />
+				<field name="T3FooterLinkColorHover" type="color" default="" label="T3_VARS_FOOTER_LINK_COLOR_HOVER_LABEL" description="T3_VARS_FOOTER_LINK_COLOR_HOVER_DESC" />
+			</fieldset>
+
+		</fields>
+    </config>
+
+	<updateservers>
+	   <server type="collection">http://update.joomlart.com/service/tracking/list.xml</server>
+	</updateservers>	
+
+</extension>

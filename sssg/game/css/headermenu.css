@@ -1,0 +1,125 @@
+p {line-height: 24px}
+.clearfloat {line-height: 0; height: 0px; clear: both; font-size: 1px}
+#container {text-align: left; margin: 0px auto}
+a {color: #333; text-decoration: none}
+a:hover {color: #ef9b11; text-decoration: underline}
+#header_menu {padding-bottom: 0px; padding-left: 0px; padding-right: 0px; font-size: 12px; padding-top: 0px}
+#page {margin-left: auto; margin-right: auto}
+#site-nav-bg {z-index: 9999; border-bottom: #d2d2d2 1px solid; position: absolute; width: 100%; background: #f7f7f7; height: 25px; top: 0px; left: 0px}
+#site-nav a {color: #666}
+#site-nav a:hover {color: #f50}
+#site-nav .login-info {float: left; padding-top: 1px}
+#site-nav .login-info a {margin-right: 8px}
+#site-nav .login-info a.user-nick {margin-right: 0px}
+#site-nav .quick-menu {top: 0px; right: 0px}
+#site-nav .quick-menu li {padding-bottom: 0px; padding-left: 5px; padding-right: 5px; background-position: right 6px; float: left; margin-left: -1px; padding-top: 2px}
+#site-nav .quick-menu li.last {background: none transparent scroll repeat 0% 0%}
+#site-nav .quick-menu li.menu-item {position: relative; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px}
+#site-nav .quick-menu .cart {position: relative; padding-top: 1px; _padding-top: 2px}
+#site-nav .quick-menu .cart a {padding-left: 16px}
+#site-nav .quick-menu .cart s {position: absolute; width: 14px; background-position: -83px -21px; height: 11px; top: 6px; left: 8px}
+#site-nav .menu-hd {z-index: 10002; position: relative; padding-bottom: 0px; margin: 1px 1px 0px; padding-left: 10px; padding-right: 22px; display: block; height: 20px; cursor: pointer; padding-top: 0px}
+#site-nav .mytaobao .menu-hd {width: 48px; padding-top: 1px; _padding-top: 1px}
+#site-nav .users .menu-hd {width: 48px; padding-top: 1px; _padding-top: 1px}
+#site-nav .search .menu-hd {width: 24px; padding-top: 1px; _padding-top: 1px}
+#site-nav .services .menu-hd {width: 48px; padding-top: 1px; _padding-top: 1px}
+#site-nav .menu-hd b {border-bottom: #eee 4px solid; position: absolute; border-left: #eee 4px solid; line-height: 0; width: 0px; height: 0px; font-size: 0px; border-top: #666 4px solid; top: 7px; right: 10px; border-right: #eee 4px solid; -webkit-transition: -webkit-transform .2s ease-in; -moz-transition: -webkit-transform .2s ease-in; -o-transition: -webkit-transform .2s ease-in; transition: -webkit-transform .2s ease-in}
+#site-nav .search .menu-hd {padding-left: 25px; color: #666}
+#site-nav .search .menu-hd s {position: absolute; width: 14px; background-position: -67px -20px; height: 13px; top: 4px; left: 9px}
+#site-nav .menu-bd {z-index: 10001; border-bottom: #bfbfbf 1px solid; position: absolute; border-left: #bfbfbf 1px solid; display: none; background: #fff; border-top: #bfbfbf 1px solid; top: 21px; right: 0px; border-right: #bfbfbf 1px solid}
+#site-nav .search .menu-bd {_right: -1px}
+#site-nav iframe.menu-bd {z-index: -1; filter: alpha(opacity=0); border-right-width: 0px; background: none transparent scroll repeat 0% 0%; float: left; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px}
+#site-nav .menu-bd-panel {padding-bottom: 6px; padding-left: 10px; padding-right: 10px; padding-top: 10px}
+#site-nav .menu-item-opp .menu-bd {left: 0px}
+#site-nav .menu-item-opp .menu-bd s.rt {left: 0px}
+#site-nav .menu-item-opp .menu-bd s.lt {background-position: -87px -55px; right: -2px; left: auto}
+#site-nav .menu {position: relative}
+#site-nav .menu:hover .menu-hd {border-bottom: #bfbfbf 1px; border-left: #bfbfbf 1px solid; margin: 0px; background: white; border-top: #bfbfbf 1px solid; border-right: #bfbfbf 1px solid}
+#site-nav .hover .menu-hd {border-bottom: #bfbfbf 1px; border-left: #bfbfbf 1px solid; margin: 0px; background: white; border-top: #bfbfbf 1px solid; border-right: #bfbfbf 1px solid}
+#site-nav .menu:hover .menu-bd {display: block}
+#site-nav .hover .menu-bd {display: block}
+#site-nav .menu:hover .menu-hd b {border-bottom-color: #fff; filter: progid:dximagetransform.microsoft.basicimage(rotation=2); border-top-color: #666; border-right-color: #fff; border-left-color: #fff; top: 5px; -moz-transform: rotate(180deg); -moz-transform-origin: 50% 30%; -webkit-transform: rotate(180deg); -webkit-transform-origin: 50% 30%; -o-transform: rotate(180deg); -o-transform-origin: 50% 30%; transform: rotate(180deg); transform-origin: 50% 30%}
+#site-nav .hover .menu-hd b {border-bottom-color: #fff; filter: progid:dximagetransform.microsoft.basicimage(rotation=2); border-top-color: #666; border-right-color: #fff; border-left-color: #fff; top: 5px; -moz-transform: rotate(180deg); -moz-transform-origin: 50% 30%; -webkit-transform: rotate(180deg); -webkit-transform-origin: 50% 30%; -o-transform: rotate(180deg); -o-transform-origin: 50% 30%; transform: rotate(180deg); transform-origin: 50% 30%}
+#site-nav .mytaobao .menu-bd {line-height: 1.7; width: 400px; top: 21px}
+#site-nav .mytaobao .menu-bd-panel {padding-bottom: 8px; padding-left: 10px; padding-right: 10px; padding-top: 8px}
+#site-nav .search .menu-bd {width: 204px; height: 66px; top: 21px}
+#site-nav .search .menu-bd input {border-bottom: #b7b7b7 1px solid; border-left: #878787 1px solid; padding-bottom: 2px; line-height: 13px; padding-left: 1px; width: 180px; padding-right: 1px; margin-bottom: 5px; float: left; border-top: #878787 1px solid; border-right: #b7b7b7 1px solid; padding-top: 3px}
+#site-nav .search .menu-bd button {border-right-width: 0px; width: 66px; background-position: 0px -20px; float: left; border-top-width: 0px; border-bottom-width: 0px; height: 24px; color: #fff; border-left-width: 0px; cursor: pointer}
+#site-nav .services .menu-bd {width: 174px; height: 218px; top: 21px}
+#site-nav .services .menu-bd-panel {padding-bottom: 5px; padding-left: 10px; padding-right: 10px; padding-top: 5px}
+#site-nav .services .menu-bd dl {border-bottom: #e5e5e5 1px solid; padding-bottom: 5px; padding-left: 0px; padding-right: 0px; padding-top: 5px}
+#site-nav .services .menu-bd .last {border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px}
+#site-nav .services .menu-bd dt {text-align: left; line-height: 1.5; color: #8c8c8c; font-weight: bold}
+#site-nav .services .menu-bd dd {text-align: left; line-height: 1.6}
+#site-nav .services .menu-bd dd a {margin-right: 2px}
+#header_menu_games {padding-bottom: 20px}
+#header_menu_games li {line-height:30px; width:100px;height:30px;text-align:left;}
+#header_xx {line-height: 16px; padding-left: 10px; float: left; color: #898989; clear: both; padding-top: 4px}
+#header_xx span {cursor: pointer}
+#header_xx b {color: #00f}
+#header_xx a:hover {color: #ff6600}
+#header_xx a {color: #898989}
+#header_menu_users {padding-bottom: 20px; width: 80px; float: left}
+#site-nav #header_menu_users li {
+	padding-bottom: 0px; line-height: 20px; padding-left: 0px; width: 80px; padding-right: 0px; padding-top: 0px
+}
+#header_menu_users li strong {
+	color: #0060ad
+}
+#message {
+	width: 248px; background: url(/image/message.png) no-repeat 50% top; height: 160px; _background: none
+}
+#mes_close {
+	text-align: right; width: 233px; padding-right: 15px; padding-top: 10px
+}
+#message a {
+	position: relative
+}
+#mes_tit {
+	text-align: center; padding-bottom: 0px; padding-left: 10px; width: 228px; padding-right: 10px; color: #005eaa; font-weight: bold; padding-top: 10px
+}
+#mes_pre {
+	text-align: left; padding-bottom: 0px; line-height: 180%; text-indent: 2em; padding-left: 10px; width: 228px; padding-right: 10px; color: #6b6b6b; padding-top: 10px
+}
+#mes_pre a {
+	color: #6b6b6b
+}
+#message2 {
+	width: 299px; background: url(/image/message.jpg) no-repeat 50% top; height: 193px; _background: none
+}
+#mes_close2 {
+	text-align: right; width: 283px; padding-right: 15px; padding-top: 19px
+}
+#message2 a {
+	position: relative
+}
+#mes_cen_words2 {
+	width: 198px; float: left; height: auto; font-size: 12px; overflow: hidden
+}
+#mes_cen2 {
+	padding-bottom: 0px; margin: 0px auto; padding-left: 10px; width: 295px; padding-right: 0px; height: auto; padding-top: 10px
+}
+#mes_tit2 {
+	text-align: center; padding-bottom: 0px; margin: 0px auto; padding-left: 0px; width: 198px; padding-right: 0px; color: #ffffff; font-size: 12px; font-weight: bold; padding-top: 0px
+}
+#mes_pre2 {
+	text-align: left; padding-bottom: 0px; line-height: 160%; text-indent: 2em; margin: 0px auto; padding-left: 6px; width: 182px; padding-right: 0px; color: #ffffff; font-size: 12px; overflow: hidden; padding-top: 7px
+}
+#mes_img2 {
+	padding-bottom: 0px; padding-left: 0px; width: 87px; padding-right: 0px; float: left; height: auto; overflow: hidden; padding-top: 7px
+}
+#mes_img2 img {
+	margin: 0px auto; width: auto; height: auto
+}
+#game_start2 {
+	text-align: center; padding-bottom: 0px; margin: 0px auto; padding-left: 0px; width: 295px; padding-right: 0px; height: 36px; overflow: hidden; padding-top: 4px
+}
+#game_start2 a {
+	text-decoration: none
+}
+#game_start2 a:hover {
+	text-decoration: underline
+}
+#mes_pre2 a {
+	color: #6b6b6b
+}

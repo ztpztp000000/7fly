@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>盛世三国</title>
+    <link rel="stylesheet" type="text/css" href="/styles/style.css" />
+    <script type="text/javascript" src="/images/jquery.js"></script>
+</head>
+<body style="height: 261px; overflow: hidden;">
+    <div id="warpper" class="clearfix">
+        <div class="content-4" style="display: none;" id="step2">
+            <a class="close_s" href="javascript:void(0)"></a>
+            <div class="popup_inner">
+                <div class="" id="played_list">
+                    <div class="popup_title1"></div>
+                    <div class="just"></div>
+                </div>
+                <div class="popup_title2"></div>
+                <div class="popup_block" id="all_list">
+                    <div class="just">
+                        <a id="sid_S2" class="s_list" href="javascript:void(0)"><span class="not_zhan"></span>
+                            双线2区 烽火连营<span style="color: #009b80;">(新)</span></a> <a id="sid_S1" class="s_list"
+                                href="javascript:void(0)"><span class="not_zhan"></span>双线1区 群雄逐鹿</a> <a id="sid_S0"
+                                    class="s_list" href="javascript:void(0)"><span class="not_zhan"></span>不删档测试服</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-5 clearfix" style="height: 261px; overflow: hidden;" id="step1">
+            <div class="left-main">
+                <div class="main-title">
+                    游戏公告
+                </div>
+                <div class="main-note">
+                    <a href="#" target="_blank">•&nbsp;&nbsp;载入中...</a>
+                </div>
+            </div>
+            <div class="right-main">
+                <div class="main-text">
+                    <div class="s_username"></div>
+                    <script type="text/javascript">
+                        if (xd.getCookie('xd_sg_username')) {
+                            $('.s_username').html(xd.getCookie('xd_sg_username'));
+                        } else {
+                            $('.s_username').html('登录中...');
+                        }
+                    </script>
+                    <div class="s_name"></div>
+                    <script type="text/javascript">
+                        if (xd.getCookie('xd_sg_sname')) {
+                            $('.s_name').html(xd.getCookie('xd_sg_sname'));
+                        }
+                    </script>
+                    <div class="choose_s"></div>
+                    <script type="text/javascript">
+                        $(".choose_s").click(function() {
+                            $("#step1").hide();
+                            $("#step2").show();
+                        });
+                    </script>
+                    <div class="latest_tag"></div>
+                    <div>
+                        <form action="http://www.xd.com/games/play" method="GET" id="startForm">
+                        <div class="enter_button">
+                            <input type="hidden" name="app" value="sssg" />
+                            <input id="serverSelect" type="hidden" name="server" value="" />
+                            <script type="text/javascript">
+                                if (xd.getCookie('xd_sg_sid')) {
+                                    $('#serverSelect').html(xd.getCookie('xd_sg_sid'));
+                                }
+                            </script>
+                            <input type="hidden" id="client" name="client" value="pc" />
+                            <a id="start_game" style="float: left" class="btn-link btn_white" href="#">进入游戏</a>
+                            <a style="float: left; padding-top: 10px;" id="logout" class="">重新登录</a>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar" style="height: 261px; overflow: hidden;">
+            <div class="ads-box">
+                <a target="_blank" href="../archives/1368" />
+                <img src="http://game.verycd.com/game/images/login_ad.gif?1305097820" alt="最新开服公告" /></a>
+            </div>
+            <div class="news-box">
+                <div class="news-box-title">
+                    <span style="float: left;">客服中心 </span><a href="http://sg.xd.com" style="color: #d8d8d8;
+                        float: right; font-size: 12px;" target="_blank">进入官网&gt;&gt;</a>
+                </div>
+                <div class="news-box-main">
+                    玩家交流群： <span style="color: white;"><a target="_blank" href="http://qun.qq.com/#jointhegroup/gid/109690957"
+                        style="color: white;">109690957</a><br />
+                        <a target="_blank" href="http://qun.qq.com/#jointhegroup/gid/147894167" style="color: white;">
+                            147894167</a> </span>
+                    <br />
+                    <!--span style="color:white;">2群：<a target="_blank" href="http://qun.qq.com/#jointhegroup/gid/109690597" style="color:white;">109690597</a></span><br />
+                        <span style="color:white;">3群：<a target="_blank" href="http://qun.qq.com/#jointhegroup/gid/147894167" style="color:white;">147894167</a>(新)</span><br /-->
+                    <a target="_blank" style="color: #BCA734; text-decoration: underline; font-weight: bold;"
+                        href="http://bbs.xd.com/thread-20815-1-1.html">登录遇到问题？</a><br />
+                    客服QQ：
+                    <br />
+                    GM01：<a target="blank" href="http://wpa.qq.com/msgrd?v=3&uin=537090821&site=qq&menu=yes">537090821</a>
+                    <br />
+                    GM02：<a target="blank" href="http://wpa.qq.com/msgrd?v=3&uin=537090828&site=qq&menu=yes">537090828</a>
+                    <br />
+                    客服热线：<span style="color: white;">400-820-6706</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

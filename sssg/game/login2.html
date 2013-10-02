@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>盛世三国</title>
+<link href="css/login.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="images/jquery.js"></script>
+</head>
+<body>
+<div class="clearfix" id="warpper">
+  <div class="content">
+    <div id="log-box" style="display: block;">
+      <h1 class="login_title1">&nbsp;</h1>
+      <form action="http://www.9qwan.com/sssg_client_login.php" method="post" id="UserLoginForm" name="log-form">
+        <ul>
+          <li> <span class="value">
+            <label for="login_username" id="label_username"></label>
+            </span> <span class="ipt-box">
+            <input type="text" name="member_username" class="usernameInput" id="login_username">
+            </span> </li>
+          <li> <span class="value">
+            <label for="login_password"></label>
+            </span> <span class="ipt-box">
+            <input type="password" name="member_password" class="passwordInput" id="login_password">
+            </span> </li>
+        </ul>
+        <div class="reg-sub-btn">
+          <input type="hidden" value="withtml5" name="post_mode">
+		  <input type="hidden" value="1" name="gameId">
+		  <input type="hidden" value="2" name="serverId">
+		  <input type="hidden" value="pc" name="extra">
+          <a href="javascript:bts(3);" title="" id="login_submit_btn" class="btn-link">进入游戏</a>
+		   </div>
+      </form>
+    </div>
+	
+	<div style="display: block;" id="reg-box">
+      <form action="http://www.777fly.com/user.php?action=register_ok" method="post" id="UserRegisterForm" name="reg-form">
+        <ul>
+          <li id="login_title">&nbsp;</li>
+          <li class="usernameField"> <span class="value">
+            <label for="username"></label>
+            </span> <span class="ipt-box">
+            <input type="text" name="member_username" class="usernameInput" id="username">
+            </span> <span class="info usernameInfo infoError" id="username_info" style="display: none;">用户名太短，至少2位</span> </li>
+          <li class="passwordField"> <span class="value">
+            <label for="password"></label>
+            </span> <span class="ipt-box">
+            <input type="password" name="member_password" class="passwordInput" id="password">
+            </span> <span class="info passwordInfo infoError" id="password_info" style="display: none;">6-20位字符</span> </li>
+          <li class="confirmField"> <span class="value">
+            <label for="password_confirm"></label>
+            </span> <span class="ipt-box">
+            <input type="password" name="member_password_confirm" class="confirmInput" id="password_confirm">
+            </span> <span class="info confirmInfo infoError" id="password_confirm_info" style="display: none;">输入确认密码</span> </li>
+        </ul>
+        <div class="reg-sub-btn">
+          <input type="hidden" value="withtml5" name="post_mode">
+		  <input type="hidden" value="2" name="gameId">
+		  <input type="hidden" value="6" name="serverId">
+		  <input type="hidden" value="pc" name="extra">
+          <a href="javascript:bts(4);" title="" id="reg_submit_btn" class="btn-link">立即注册</a>
+		  <span class="reg_log_click"> <a href="javascript:bts(2);" title="" id="goto_log_btn" class="not_btn_olduser">老用户登录</a> </span> <span style="margin-left:20px;color:red" class="submitInfo" id="register_error_div"></span> </div>
+      </form>
+    </div>
+  </div>
+  <div class="sidebar" style="height:261px;overflow:hidden;">
+
+    <div class="news-box">
+      <div class="news-box-title"> <span style="float:left;">客服中心 </span> </div>
+      <p>QQ：1296092450; </p>
+ 
+ 	<p>tel:0512-67913152</p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript"> 
+function bts(id){
+	if(id==1){
+		$("#log-box").hide();
+		$("#reg-box").show();
+	}
+	if(id==2){
+		$("#log-box").show();
+		$("#reg-box").hide();
+	}
+	
+	if(id==3){
+		var flag=true;
+		var member_username=$('#login_username').val();
+		var member_password=$('#login_password').val();
+		if(member_username==""){
+			alert("请输入用户名");
+			flag=false;
+		}
+		if(member_password==""){
+			alert("请输入密码");
+			flag=false;
+		}
+		if(flag)	$("#UserLoginForm").submit();
+	}
+	if(id==4){
+		var flag=true;
+		var member_username=$('#username').val();
+		var member_password=$('#password').val();
+		var member_password_confirm=$('#password_confirm').val();
+		if(member_username==""){
+			alert("请输入用户名");
+			flag=false;
+		}
+		if(member_password==""){
+			alert("请输入密码");
+			flag=false;
+		}
+		if(member_password!=member_password_confirm){
+			alert("两次密码输入不一致");
+			flag=false;
+		}
+		if(flag)	$("#UserRegisterForm").submit();
+	}
+}
+</script>
+</body>
+</html>
+

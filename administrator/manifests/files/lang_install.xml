@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="2.5" method="upgrade">
+
+	<!-- Please use a unique name to make uninstall to work. Should be identical to your manifest filename. -->
+	<name>lang_joomla-core_Chinese</name>
+	<author>baijianpeng</author>
+	<creationDate>2012-06-03</creationDate>
+	<copyright>http://www.joomlagate.com</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>joomlagate@gmail.com</authorEmail>
+	<authorUrl>http://www.joomlagate.com</authorUrl>
+	<version>2.5.4</version>
+	<description>Joomla 2.5 核心中文语言包</description>
+
+	<!-- Fileset definition -->
+	<fileset>
+
+		<!-- back-end -->
+		<files folder="administrator" target="administrator">
+			<folder>language</folder>
+		</files>
+
+		<!-- front-end -->
+		<files folder="language" target="language">
+			<folder>zh-CN</folder>
+			<folder>zh-TW</folder>
+		</files>
+
+		<!-- media -->
+		<files folder="media" target="media">
+			<folder>editors</folder>
+			<folder>mod_languages</folder>
+		</files>
+	</fileset>
+</extension>

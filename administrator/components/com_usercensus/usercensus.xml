@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.9" method="upgrade">
+ 
+ <name>UserCensus</name>
+ <creationDate>May 2013</creationDate>
+ <author>Jerry</author>
+ <authorEmail>Jerry@wanooxx.com</authorEmail>
+ <authorUrl>http://www.wanooxx.com</authorUrl>
+ <copyright>Copyright Info</copyright>
+ <license>daxian</license>
+ 
+ <version>0.0.1</version>
+ <description>User census</description>
+
+ <files folder="site">
+  <filename>index.html</filename>
+ </files>
+ <administration>
+  <menu>用户统计</menu>
+  <files folder="admin">
+   <filename>index.html</filename>
+   <filename>usercensus.php</filename>
+   <filename>controller.php</filename>
+   <folder>views</folder>
+   <folder>models</folder>
+  </files>
+ </administration>
+</extension>

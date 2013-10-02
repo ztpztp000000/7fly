@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.9" method="upgrade">
+ 
+ <name>pay</name>
+ 
+ <creationDate>April 2013</creationDate>
+ <author>Jerry</author>
+ <authorEmail>Jerry@wanooxx.com</authorEmail>
+ <authorUrl>http://www.wanooxx.com</authorUrl>
+ <copyright>Copyright Info</copyright>
+ <license>daxian</license>
+ <!--  The version string is recorded in the components table -->
+ <version>0.0.1</version>
+ <!-- The description is optional and defaults to the name -->
+ <description>site pay</description>
+
+ <files folder="site">
+  <filename>index.html</filename>
+  <filename>pay.php</filename>
+  <filename>controller.php</filename>
+  <folder>views</folder>
+ </files>
+ <administration>
+  <menu>pay</menu>
+  <files folder="admin">
+   <filename>index.html</filename>
+   <filename>pay.php</filename>
+  </files>
+ </administration>
+</extension>

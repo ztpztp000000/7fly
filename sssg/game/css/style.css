@@ -1,0 +1,293 @@
+/* reset */
+html{color:#333;background:#FFF;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {margin:0;padding:0;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0;}
+address,caption,cite,code,dfn,strong,em,th,var {font-style:normal;font-weight:normal;}
+li {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
+q:before,q:after {content:'';}
+abbr,acronym {border:0;font-variant:normal;}
+sup {vertical-align:text-top;}
+sub {vertical-align:text-bottom;}
+input,textarea,select {font-family:inherit;font-size:inherit;font-weight:inherit;}
+input,textarea,select {*font-size:100%;}
+legend {color:#000;}
+article, aside, details, figcaption, figure, footer,header, hgroup, menu, nav, section,summary, time, mark, audio, video {display: block;margin: 0;padding: 0;}
+mark { background: #ff0; }
+select,option {border:none;}
+body{font: 12px/1.6 tahoma, arial,\5b8b\4f53, sans-serif;text-align:left;}
+a{color:#000;text-decoration:none;}
+a:hover{text-decoration:none;_zoom:1;}
+a span, a strong{cursor:pointer;}
+
+a.btn_white{color:#fff !important;}
+a.btn-link{font-family:"微软雅黑",Helvetica,Arial,sans-serif;display:inline-block;text-align:center;font-size:16px;font-weight:bold;color:#fff;height:43px;line-height:40px;width:130px;float:left;background:url(http://game.verycd.com/game/images/button.jpg?2) no-repeat 0 -44px;}
+a.btn-link:hover{background:url(http://game.verycd.com/game/images/button.jpg?2) no-repeat 0 -88px;text-decoration:none;}
+a.btn-link-disable{font-family:"微软雅黑",Helvetica,Arial,sans-serif;display:inline-block;text-align:center;font-size:16px;font-weight:bold;color:#fff;height:43px;line-height:40px;width:130px;background:url(http://game.verycd.com/game/images/button.jpg?2) no-repeat 0 0 !important;}
+a.btn-link-disable:hover{text-decoration:none;}
+/* style */
+#warpper{width:554px;height:261px;overflow:hidden;background:url(../images/popup_bg2.jpg);}
+.content{float:left;width:400px;height:268px;overflow:hidden;}
+.content-2{float:left;width:400px;height:268px;overflow:hidden;background:url(http://game.verycd.com/game/images/bg-2.jpg);}
+.content-4{float:left;width:400px;height:243px;overflow:hidden;padding:30px 0 0px 0;position:relative; }
+.content-3{float:left;width:400px;height:268px;overflow:hidden;background:url(http://game.verycd.com/game/images/bg.jpg);}
+.content-5{float:left;width:400px;height:268px;overflow:hidden;background:url(http://game.verycd.com/game/images/bg_4.jpg);}
+.sidebar{float:left;width:150px;height:268px;overflow:hidden;}
+
+.content li{color:#24130f;margin-bottom:10px;overflow:hidden;}
+.content li .value{display:inline-block;width:125px;text-align:right;}
+.ipt-box input{width:150px;border:1px solid #c3bba6;background:#181108 ;color:#fbffe4;height:20px;}
+.ipt-box{border:1px solid #76644d;display:inline-block;height:22px;width:152px;}
+.ipt-box2{width:75px !important;}
+.value label{font-size:18px;font-weight:bold;font-family: "微软雅黑", Helvetica, Arial, sans-serif;}
+.login_title1{font-size:18px;font-weight:bold;font-family: "微软雅黑", Helvetica, Arial, sans-serif;color:#24130F;text-align:center;height:35px;}
+#login_title{text-align:center;font-size:18px;font-weight:bold;margin-bottom:14px;font-family: "微软雅黑", Helvetica, Arial, sans-serif;}
+
+#reg-box{padding-top:30px;background:url(http://game.verycd.com/game/images/bg-reg.jpg) 0 -10px;height:238px;width:400px;}
+.reg-sub-btn{padding:0 0 0 129px;overflow:hidden;display:block;float:left;}
+.reg-sub-btn input{width:109px;height:38px;line-height:38px;margin:0;padding:0;border:0;color:#fff;font-size:14px;font-weight:bold;background:url(http://game.verycd.com/game/images/button.jpg) no-repeat 0 -30px;}
+.not_btn{color:#c0a13b !important;text-decoration:underline;padding-left:1px;cursor: pointer;float:left;}
+.not_btn_olduser{color:#c0a13b !important;text-decoration:underline;cursor: pointer;padding-left:1px;display:block;}
+.big_tab{height:55px;}
+
+#log-box{background:url(http://game.verycd.com/game/images/bg-log.jpg) 0 0;height:266px;width:400px;padding-top:30px;}
+.ads-box{margin-top:25px;padding-left:5px;}
+.news-box{margin-top:1px;margin-left:5px;height:180px;}
+.news-box-title{margin-top:5px;color:#bca734;padding:2px 8px;overflow:hidden;height:20px;background:url(../images/news_title_bg.jpg)}
+.news-box-main{margin:5px 0;margin-left:10px;width:130px;color:#999;overflow:hidden;line-height:17px;}
+.news-box-main a{color:#999;}
+/* another */
+.left-main{float:left;width:160px;height:261px;overflow:hidden;}
+.right-main{float:left;width:240px;height:261px;overflow:hidden;position:relative;}
+.main-title{text-align:center;color:#24130f;padding:10px 0 0;height:18px;overflow:hidden;font-weight:bold;}
+.main-text{margin:10px;height:210px;color:#FFF8DB;overflow:hidden;}
+.main-note{margin:10px;height:210px;color:#FFF8DB;overflow:hidden;padding:5px 5px 0;background:black;opacity:0.5;-moz-border-radius:5px;filter:alpha(opacity=50);-webkit-border-radius:5px;border-radius:5px;}
+.main-note a{color:white;}
+.main-note a:hover{color:#00FFFC;}
+.right-main .main-text{margin:10px 20px;color:#24130f;}
+.wel-text{height:1.6em;overflow:hidden;}
+.check-code-input{vertical-align:top;border:none;background:#000;height:20px;border:1px solid #333;color:#eee;width:130px;}
+a.check-code-btn{display:inline-block;height:25px;width:49px;background:url(http://game.verycd.com/game/images/btn1.png) no-repeat 0 0;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=images/btn1.png, sizingMethod='scale');_background:none;}
+/*a.check-code-btn:hover{display:inline-block;height:25px;width:49px;background:url(http://game.verycd.com/game/images/btn2.png) no-repeat 0 0;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=images/btn2.png, sizingMethod='scale');_background:none;}
+a.check-code-btn:active{display:inline-block;height:25px;width:49px;background:url(http://game.verycd.com/game/images/btn3.png) no-repeat 0 0;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=images/btn3.png, sizingMethod='scale');_background:none;}
+*/
+.info{color:white;}
+.info_error{
+    color: red;
+}
+.info_ok{
+    color: #1BE03F;
+}
+.big_tab .l_choosen{
+	background:url(http://game.verycd.com/game/images/tab_1.jpg) 0 0 !important;
+	text-decoration:none;
+}
+.big_tab .right_tab{
+	background:url(http://game.verycd.com/game/images/tab_1.jpg) 0 55px;
+	height:55px;
+	width:200px;
+	float:right;
+	cursor:pointer;
+}
+.big_tab .r_choosen{
+	background:url(http://game.verycd.com/game/images/tab_1.jpg) 0 -112px !important;
+}
+.big_tab .left_tab{
+	background:url(http://game.verycd.com/game/images/tab_1.jpg) 0 -279px;
+	height:55px;
+	width:200px;
+	float:left;
+	cursor:pointer;
+}
+#UserLoginForm{clear:both;padding-top:5px;padding-left:20px;}
+/*2011.5.10 yudonghan@verycd.com add verycd reg&login page*/
+.vcreg_label{float:left;width:95px;text-align:right;clear:both;font-size:15px;padding:2px 5px 0 0;color:white;font-weight:bold;font-family:"微软雅黑", Helvetica, Arial, sans-serif;}
+.vclogin_label{float:left;width:95px;text-align:right;clear:both;font-size:15px;padding:8px 5px 0 0;color:white;font-weight:bold;font-family:"微软雅黑", Helvetica, Arial, sans-serif;}
+.vcreg_sign{float:left;padding:3px 0 0 5px;}
+.vclogin_sign{color:red;float:left;padding:13px 0 0 5px;}
+.vcreg_input{float:left;}
+.vcreg_button{margin:4px 0 0 102px;float:left;clear:both;}
+.vclogin_button{margin:20px 0 0 102px;float:left;clear:both;}
+.vcreg_note{margin:5px 5px 0 5px;height:80px;color:white;overflow:hidden;padding:5px;background:black;opacity:0.7;-moz-border-radius:5px;filter:alpha(opacity=70);-webkit-border-radius:5px;border-radius:5px;line-height:15px;}
+.vcreg_title{font-size:14px;font-weight:bold;line-height:15px;padding:5px;}
+.vclogin_title{font-size:14px;font-weight:bold;line-height:25px;padding:0 10px;}
+.vcreg_title span{font-size:12px;font-weight:normal;color:white;}
+.vclogin_note{margin:10px;height:50px;color:white;overflow:hidden;padding:8px;background:black;opacity:0.7;-moz-border-radius:5px;filter:alpha(opacity=70);-webkit-border-radius:5px;border-radius:5px;}
+.fu_button{background:url(http://game.verycd.com/game/images/popup_button.png) 0 31px;_background:url(http://game.verycd.com/game/images/popup_button_ie.png) 0 31px;height:32px;width:130px;float:left;text-align:center;margin:5px;}
+.fu_button span{color:#ffe7a8;display:block;padding-top:5px;}
+.fu_button:hover{background-position:0 0;__background:url(http://game.verycd.com/game/images/popup_button_ie.png) 0 0 no-repeat;text-decoration:none;}
+.popup_block{
+	display:block;overflow:auto;clear:both;margin-top:8px;height:96px;width:360px;
+	scrollbar-face-color:#7a421a;
+	scrollbar-highlight-color:#c29248;
+	scrollbar-shadow-color:#421e03;
+	scrollbar-3dlight-color:#c29248;
+	scrollbar-arrow-color:#c29248;
+	scrollbar-track-color:#b98d4c;
+	scrollbar-darkshadow-color:#421e03;
+}
+.popup_title1{
+ background:url(../images/popup_title.png);	
+
+	height:32px;
+	width:100%;
+	display:block;
+	float:left;
+}
+.popup_title2{
+	background:url(../images/popup_title2.png) 0 -40px no-repeat;
+	height:30px;
+	margin-top:5px;
+	width:376px;
+	float:left;
+}
+.popup_inner{
+	padding:0px 10px;
+	height:210px;
+	width:305px;
+	}
+.enter_button{
+	position:absolute;top:180px;
+}
+.choose_s{
+	background:url(http://game.verycd.com/game/images/choose_button.jpg);
+	position:absolute;
+	height:27px;
+	width:103px;
+	top:121px;
+	left:64px;
+	cursor:pointer;
+}
+.choose_s:hover{
+	background-position:0 28px;
+}
+.latest_tag{
+	background:url(http://game.verycd.com/game/images/latest_tag.png);
+	position:absolute;
+	height:16px;
+	width:58px;
+	top:128px;
+	left:172px;
+}
+.s_username{
+	position:absolute;
+	left:72px;
+	top:42px;
+	font-weight:bold;
+}
+.s_name{
+	position:absolute;
+	top:94px;
+	left:30px;
+	height:16px;
+	line-height:15px;
+	color:#ffd68f;
+	width:174px;
+	text-align:center;
+	cursor: pointer;
+/*	background:#0A8783;
+	color:white;*/
+}
+/*#start_game{
+	background:url(http://game.verycd.com/game/images/button2.jpg);
+	height:42px;
+	width:129px;
+}
+#start_game:hover{
+	background-position:0 -44px;
+}*/
+#logout{color:#c0a13b;font-size:14px;padding-left:10px;text-decoration:underline;cursor:pointer;}
+.close_s{
+	position:absolute;
+	top:13px;
+	left:359px;
+	cursor:pointer;
+	background:url(http://game.verycd.com/game/images/xx.jpg);
+	width:29px;
+	height:25px;
+}
+.close_s:hover{
+	background:url(http://game.verycd.com/game/images/xx_hover.jpg);
+}
+.s_list{
+	width:145px;
+	height:25px;
+	float:left;
+	color:#6e7e00;
+	text-align:right;
+	cursor:pointer;
+	font-weight:bold;
+	paddibng:1px 0;
+}
+.s_list2{
+	width:145px;
+	height:25px;
+	float:left;
+	color:#6e7e00;
+	text-align:left;
+	cursor:pointer;
+	font-weight:bold;
+	paddibng:1px 0;
+}
+.weihu{
+    color : gray !important;
+}
+.just{
+	padding-left:13px;
+	overflow:hidden;
+}
+.s_list:hover,.s_list2:hover,.latest:hover{
+	text-decoration:underline;
+	color:#285f00;
+}
+.latest{
+	padding-left:30px;
+	color:#793400;
+	font-weight:bold;
+	cursor:pointer;
+}
+.zhan{
+	background:url(http://game.verycd.com/game/images/zhan.png) no-repeat 0 3px;
+	height:16px;
+	width:16px;
+	float:left;
+	display:block;
+}
+.not_zhan{
+	height:15px;
+	width:13px;
+	float:left;
+	display:block;
+}
+#played_list{
+	overflow:hidden;
+	width:367px;
+}
+#login_verify{width:73px !important;}
+.verify_img{height:25px;float:left;padding:0 0 0 5px;}
+#qq_login:hover {text-decoration:none;_zoom:0;}
+
+.reg_log_click{
+	width:80px;
+	float:left;
+	padding-left:10px;
+}
+.reg_log_click2{
+	width:110px;
+	float:left;
+	padding-left:10px;
+}
+.forget_psw{
+	color:white;
+	display:inline-block;
+	padding-left:10px;
+	text-decoration:underline;
+}
+#qq_login span{
+	text-decoration:underline;
+}
+#qq_login span:hover{
+	text-decoration:none;
+}
